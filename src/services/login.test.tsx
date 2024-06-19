@@ -6,7 +6,12 @@ describe('login', () => {
     window.alert = mockAlert
 
     it('Deve exibir um alert com boas vindas', () => {
-        login()
-        expect(mockAlert).toHaveBeenCalledWith('Bem vinda!')
+        login("user", "pass")
+        expect(mockAlert).toHaveBeenCalledWith('Seja Bem vindo!')
     })
+
+    it('Deve inserir um alerta de ausência de login ou senha', () => {
+        login()
+        expect(mockAlert).toHaveBeenCalledWith("Por favor insira usuário e senha.")
+    } )
 })
