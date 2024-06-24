@@ -31,7 +31,7 @@ export const AppContextProvider = ({ children }: any) => {
       setIsLoggedIn(login);
       setUserData({ name, email, balance, id });
     }
-  }, []);
+  }, [storage]);
 
   const user = "Eric Santana";
 
