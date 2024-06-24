@@ -1,9 +1,11 @@
+import { api } from "../api"
 
-export const login = (username?: string,  password?: string): void => {
-    if(username && password) {
-        alert('Seja Bem vindo!');
-        return;
+export const login = async (email: string): Promise<boolean> => {
+    const data: any = await api
+
+    if(email !== data.email) {
+        return false
     }
 
-    alert("Por favor insira usuário e senha.")
+    return true
 }
