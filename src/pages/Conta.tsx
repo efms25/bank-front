@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react"
 import { api } from "../api"
 import CardInfo from "../components/CardInfo"
 import { AppContext } from "../components/AppContext"
+import Button from '../components/Button/Button'
 
 interface UserData {
     email: string
@@ -51,6 +52,7 @@ const Conta = () => {
                         <>
                             <CardInfo mainContent={`Bem vindo ${userData?.name}`} content={`${actualData.getDay()} / ${actualData.getMonth()} / ${actualData.getFullYear()} ${actualData.getHours()}:${actualData.getMinutes()}`} />
                             <CardInfo mainContent='Saldo' content={`R$ ${userData.balance}`}/>
+                            <Button onClick={() => navigate('/profile')} name="Perfil"/>
                         </>
                     )
                 }

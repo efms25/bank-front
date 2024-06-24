@@ -5,11 +5,7 @@ import React from "react";
 export const Card = ({children}: any) => {
   return (
     <React.Fragment>
-      <Box
-        minHeight="100vh"
-        background="linear-gradient(129deg, rgba(251,195,3,0.05) 0%, rgba(255,223,0,0.05) 100%)"
-        padding="25px"
-      >
+      <Box>
         <Center>
           <Box
             backgroundColor="#FFFFFF"
